@@ -22,7 +22,7 @@
       google.charts.setOnLoadCallback(initChart);
     
       function initChart() {
-        URL = "https://docs.google.com/spreadsheets/d/10BJ7nfPlbLH0esyzDi5ZjtlEPuofWKIqLLnppjbYBzE/edit?usp=sharing";
+        URL = "https://docs.google.com/spreadsheets/d/1_yNSoeDMo26cyeyIHGbfAIe9qm1Sc9xkNKEI0_OkO2E/edit?usp=sharing";
         var query = new google.visualization.Query(URL);
         query.setQuery('select *');
         query.send(function(response) {
@@ -86,13 +86,16 @@
             plugins: {
               title: {
                 display: true,
-                text: dataj.cols[0].label
+                text: dataj.cols[0].label,
+                
               }
+              
             },
             responsive: true,
           }
         }
         chart = new Chart(canvas, setup);
+        
     
       }
     </script>
